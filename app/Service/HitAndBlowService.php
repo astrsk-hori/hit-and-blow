@@ -51,7 +51,7 @@ class HitAndBlowService
 
         $user_answers = str_split($user_answer);
         if (count($user_answers) != 3) {
-                throw new \Exception("3桁の数字以外が入力されたので終了します。");
+                throw new \Exception("3桁の数字以外が入力されたので終了します。正解は".$this->getAnswer());
         }
 
         $hit_cnt             = $this->getHitCnt($user_answers);
